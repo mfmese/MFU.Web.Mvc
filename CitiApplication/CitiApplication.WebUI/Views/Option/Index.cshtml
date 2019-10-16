@@ -1,0 +1,52 @@
+﻿@model OptionViewModel
+
+<h4>Option</h4>
+
+@(Html.DevExtreme().DataGrid<Application.Business.Models.Option>()
+    .ToCitiDataGrid<Application.Business.Models.Option>()
+    .ID("dataGridOption")
+    .CitiDataSource(Model.GridModel)
+    .CitiColumnsWithMakerChecker(columns =>
+    {
+        columns.AddFor(x => x.OptionId);
+        columns.AddFor(x => x.OptionKey);
+        columns.AddFor(x => x.OptionValue);
+    })
+    .Editing(o => o.AllowUpdating(true)
+        .AllowDeleting(true)
+        .Mode(GridEditMode.Popup)
+        .Popup(p => p.Title("Option")
+            .ShowTitle(true)
+            .Width(750).Height(350)
+            .Position(pos => pos
+            .My(HorizontalAlignment.Center, VerticalAlignment.Center)
+            .At(HorizontalAlignment.Center, VerticalAlignment.Center)
+            .Of(new JS("window"))))
+        .Form(f => f.ColCount(2).ID("dataGridOptionForm").Items(items =>
+        {
+            items.AddSimpleFor(c => c.OptionId).Editor(editor => editor.TextBox()).CssClass("invisible");
+            items.AddSimpleFor(c => c.OptionKey).Editor(editor => editor.TextBox().Disabled(true));
+            items.AddSimpleFor(c => c.OptionValue).Editor(editor => editor.TextBox());
+            items.AddSimpleFor(c => c.StateIdName).Editor(editor => editor.TextBox().Disabled(true));
+            items.AddSimpleFor(c => c.StateMaker).Editor(editor => editor.TextBox().Disabled(true));
+            items.AddSimpleFor(c => c.StateDate).Editor(editor => editor.TextBox().Disabled(true));
+        })
+    ))
+)
+
+@Html.DevExtreme().Popup().HistoryOf("dataGridOption").Width(1200).Height(700).Title("Option History").ContentTemplate(
+@<text>
+    @(Html.DevExtreme().DataGrid<OptionHistory>().ToCitiDataGrid<OptionHistory>().HistoryOf("dataGridOption")
+        .CitiColumnsWithMakerChecker(columns =>
+        {
+            columns.AddFor(x => x.HistoryId).Width(170);
+            columns.AddFor(x => x.OptionId).Width(170);
+            columns.AddFor(x => x.OptionKey).Width(170);
+            columns.AddFor(x => x.OptionValue).Width(170);
+        })
+    )
+</text>)
+
+@section Scripts {
+    <partial name="~/Views/Option/Index.Scripts.cshtml" />
+}

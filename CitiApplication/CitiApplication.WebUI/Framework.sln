@@ -1,0 +1,229 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Abstractions", "Framework\Framework.Abstractions\Framework.Abstractions.csproj", "{3E1C6889-6D21-4D6F-9A8B-B0F693A7F2FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{F31E10BC-51FD-4198-9E5C-954218A04A2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Bootstrapers", "Framework\Framework.Bootstraper\Framework.Bootstrapers.csproj", "{9472F2AA-2362-4D31-8392-CD58FEDEBD12}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.PipelineBehaviours", "Framework\Framework.PipelineBehaviours\Framework.PipelineBehaviours.csproj", "{A07C023C-A626-4B3F-B59B-4C320D13C444}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Business", "Application\Application.Business\Application.Business.csproj", "{6A65532F-1CBE-468F-8022-54588EC3D928}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.WebUI", "Application\Application.WebUI\Application.WebUI.csproj", "{409B1D55-20AF-415C-BB74-FD62B84EA726}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0B233802-78BE-4CE6-80E0-27F928E770F4} = {0B233802-78BE-4CE6-80E0-27F928E770F4}
+		{27188B17-5DAC-4A05-B915-57DBD3ACE7E8} = {27188B17-5DAC-4A05-B915-57DBD3ACE7E8}
+		{26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2} = {26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2}
+		{6A65532F-1CBE-468F-8022-54588EC3D928} = {6A65532F-1CBE-468F-8022-54588EC3D928}
+		{A07C023C-A626-4B3F-B59B-4C320D13C444} = {A07C023C-A626-4B3F-B59B-4C320D13C444}
+		{3F05FC3F-E46F-41C0-AA15-A6CD09E2EE1F} = {3F05FC3F-E46F-41C0-AA15-A6CD09E2EE1F}
+		{E258126C-21CD-47C8-B38A-4A9DFFB7D70C} = {E258126C-21CD-47C8-B38A-4A9DFFB7D70C}
+		{3E1C6889-6D21-4D6F-9A8B-B0F693A7F2FC} = {3E1C6889-6D21-4D6F-9A8B-B0F693A7F2FC}
+		{F25B2FE7-F4D9-48F2-8A1A-5F6557422821} = {F25B2FE7-F4D9-48F2-8A1A-5F6557422821}
+		{21A8B7F0-C822-41AE-8FDA-2E45743BC351} = {21A8B7F0-C822-41AE-8FDA-2E45743BC351}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Integration", "Application\Application.Integration\Application.Integration.csproj", "{26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Utility", "Framework\Framework.Utility\Framework.Utility.csproj", "{27188B17-5DAC-4A05-B915-57DBD3ACE7E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Logging.SqlLogger", "Framework\Framework.Logging.SqlLogger\Framework.Logging.SqlLogger.csproj", "{21A8B7F0-C822-41AE-8FDA-2E45743BC351}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Business.Models", "Application\Application.Business.Models\Application.Business.Models.csproj", "{E26C5F25-0D73-40D8-A69B-016DFD08E12E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Data", "Application\Application.Data\Application.Data.csproj", "{0B233802-78BE-4CE6-80E0-27F928E770F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolutionItems", "Application\SolutionItems\SolutionItems.csproj", "{4EEA127B-6F20-4C68-870D-276737823F53}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.MakerChecker", "Framework\Framework.MakerChecker\Framework.MakerChecker.csproj", "{3F05FC3F-E46F-41C0-AA15-A6CD09E2EE1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Configuration", "Framework\Framework.Configuration\Framework.Configuration.csproj", "{E6BB7CD5-BB62-4A59-AC16-C0037A9D9468}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.WebUI", "Framework\Framework.WebUI\Framework.WebUI.csproj", "{B5D7ADF5-1A70-47E4-A4DF-A8C103558C82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Authorization", "Framework\Framework.Authorization\Framework.Authorization.csproj", "{E258126C-21CD-47C8-B38A-4A9DFFB7D70C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework.Caching", "Framework\Framework.Caching\Framework.Caching.csproj", "{F25B2FE7-F4D9-48F2-8A1A-5F6557422821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Configuration2", "Framework\Framework.Configuration2\Framework.Configuration2.csproj", "{3388AD64-AFA5-4F36-A393-3C31C571B930}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E1C6889-6D21-4D6F-9A8B-B0F693A7F2FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1C6889-6D21-4D6F-9A8B-B0F693A7F2FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1C6889-6D21-4D6F-9A8B-B0F693A7F2FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1C6889-6D21-4D6F-9A8B-B0F693A7F2FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9472F2AA-2362-4D31-8392-CD58FEDEBD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9472F2AA-2362-4D31-8392-CD58FEDEBD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9472F2AA-2362-4D31-8392-CD58FEDEBD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9472F2AA-2362-4D31-8392-CD58FEDEBD12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07C023C-A626-4B3F-B59B-4C320D13C444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07C023C-A626-4B3F-B59B-4C320D13C444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07C023C-A626-4B3F-B59B-4C320D13C444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07C023C-A626-4B3F-B59B-4C320D13C444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A65532F-1CBE-468F-8022-54588EC3D928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A65532F-1CBE-468F-8022-54588EC3D928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A65532F-1CBE-468F-8022-54588EC3D928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A65532F-1CBE-468F-8022-54588EC3D928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{409B1D55-20AF-415C-BB74-FD62B84EA726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409B1D55-20AF-415C-BB74-FD62B84EA726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409B1D55-20AF-415C-BB74-FD62B84EA726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409B1D55-20AF-415C-BB74-FD62B84EA726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27188B17-5DAC-4A05-B915-57DBD3ACE7E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27188B17-5DAC-4A05-B915-57DBD3ACE7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27188B17-5DAC-4A05-B915-57DBD3ACE7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27188B17-5DAC-4A05-B915-57DBD3ACE7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A8B7F0-C822-41AE-8FDA-2E45743BC351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A8B7F0-C822-41AE-8FDA-2E45743BC351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A8B7F0-C822-41AE-8FDA-2E45743BC351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A8B7F0-C822-41AE-8FDA-2E45743BC351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E26C5F25-0D73-40D8-A69B-016DFD08E12E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E26C5F25-0D73-40D8-A69B-016DFD08E12E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E26C5F25-0D73-40D8-A69B-016DFD08E12E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E26C5F25-0D73-40D8-A69B-016DFD08E12E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B233802-78BE-4CE6-80E0-27F928E770F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B233802-78BE-4CE6-80E0-27F928E770F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B233802-78BE-4CE6-80E0-27F928E770F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B233802-78BE-4CE6-80E0-27F928E770F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EEA127B-6F20-4C68-870D-276737823F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EEA127B-6F20-4C68-870D-276737823F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EEA127B-6F20-4C68-870D-276737823F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F05FC3F-E46F-41C0-AA15-A6CD09E2EE1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F05FC3F-E46F-41C0-AA15-A6CD09E2EE1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F05FC3F-E46F-41C0-AA15-A6CD09E2EE1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F05FC3F-E46F-41C0-AA15-A6CD09E2EE1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6BB7CD5-BB62-4A59-AC16-C0037A9D9468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6BB7CD5-BB62-4A59-AC16-C0037A9D9468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6BB7CD5-BB62-4A59-AC16-C0037A9D9468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6BB7CD5-BB62-4A59-AC16-C0037A9D9468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D7ADF5-1A70-47E4-A4DF-A8C103558C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D7ADF5-1A70-47E4-A4DF-A8C103558C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D7ADF5-1A70-47E4-A4DF-A8C103558C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D7ADF5-1A70-47E4-A4DF-A8C103558C82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E258126C-21CD-47C8-B38A-4A9DFFB7D70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E258126C-21CD-47C8-B38A-4A9DFFB7D70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E258126C-21CD-47C8-B38A-4A9DFFB7D70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E258126C-21CD-47C8-B38A-4A9DFFB7D70C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25B2FE7-F4D9-48F2-8A1A-5F6557422821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25B2FE7-F4D9-48F2-8A1A-5F6557422821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25B2FE7-F4D9-48F2-8A1A-5F6557422821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25B2FE7-F4D9-48F2-8A1A-5F6557422821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3388AD64-AFA5-4F36-A393-3C31C571B930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3388AD64-AFA5-4F36-A393-3C31C571B930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3388AD64-AFA5-4F36-A393-3C31C571B930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3388AD64-AFA5-4F36-A393-3C31C571B930}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3E1C6889-6D21-4D6F-9A8B-B0F693A7F2FC} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{9472F2AA-2362-4D31-8392-CD58FEDEBD12} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{A07C023C-A626-4B3F-B59B-4C320D13C444} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{6A65532F-1CBE-468F-8022-54588EC3D928} = {F31E10BC-51FD-4198-9E5C-954218A04A2B}
+		{409B1D55-20AF-415C-BB74-FD62B84EA726} = {F31E10BC-51FD-4198-9E5C-954218A04A2B}
+		{26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2} = {F31E10BC-51FD-4198-9E5C-954218A04A2B}
+		{27188B17-5DAC-4A05-B915-57DBD3ACE7E8} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{21A8B7F0-C822-41AE-8FDA-2E45743BC351} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{E26C5F25-0D73-40D8-A69B-016DFD08E12E} = {F31E10BC-51FD-4198-9E5C-954218A04A2B}
+		{0B233802-78BE-4CE6-80E0-27F928E770F4} = {F31E10BC-51FD-4198-9E5C-954218A04A2B}
+		{4EEA127B-6F20-4C68-870D-276737823F53} = {F31E10BC-51FD-4198-9E5C-954218A04A2B}
+		{3F05FC3F-E46F-41C0-AA15-A6CD09E2EE1F} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{E6BB7CD5-BB62-4A59-AC16-C0037A9D9468} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{B5D7ADF5-1A70-47E4-A4DF-A8C103558C82} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{E258126C-21CD-47C8-B38A-4A9DFFB7D70C} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{F25B2FE7-F4D9-48F2-8A1A-5F6557422821} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+		{3388AD64-AFA5-4F36-A393-3C31C571B930} = {FD08B6AD-BD3C-4C15-8A6C-935BBB140D68}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8887F865-D1C4-4F36-87E8-3C4BC1F79C3A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 18
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://bahadirerdem.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Framework\\Framework.Abstractions\\Framework.Abstractions.csproj
+		SccProjectTopLevelParentUniqueName1 = Framework.sln
+		SccProjectName1 = Framework/Framework.Abstractions
+		SccLocalPath1 = Framework\\Framework.Abstractions
+		SccProjectUniqueName2 = Framework\\Framework.Bootstraper\\Framework.Bootstrapers.csproj
+		SccProjectTopLevelParentUniqueName2 = Framework.sln
+		SccProjectName2 = Framework/Framework.Bootstraper
+		SccLocalPath2 = Framework\\Framework.Bootstraper
+		SccProjectUniqueName3 = Framework\\Framework.PipelineBehaviours\\Framework.PipelineBehaviours.csproj
+		SccProjectTopLevelParentUniqueName3 = Framework.sln
+		SccProjectName3 = Framework/Framework.PipelineBehaviours
+		SccLocalPath3 = Framework\\Framework.PipelineBehaviours
+		SccProjectUniqueName4 = Application\\Application.Business\\Application.Business.csproj
+		SccProjectTopLevelParentUniqueName4 = Framework.sln
+		SccProjectName4 = Application/Application.Business
+		SccLocalPath4 = Application\\Application.Business
+		SccProjectUniqueName5 = Application\\Application.WebUI\\Application.WebUI.csproj
+		SccProjectTopLevelParentUniqueName5 = Framework.sln
+		SccProjectName5 = Application/Application.WebUI
+		SccLocalPath5 = Application\\Application.WebUI
+		SccProjectUniqueName6 = Application\\Application.Integration\\Application.Integration.csproj
+		SccProjectTopLevelParentUniqueName6 = Framework.sln
+		SccProjectName6 = Application/Application.Integration
+		SccLocalPath6 = Application\\Application.Integration
+		SccProjectUniqueName7 = Framework\\Framework.Utility\\Framework.Utility.csproj
+		SccProjectTopLevelParentUniqueName7 = Framework.sln
+		SccProjectName7 = Framework/Framework.Utility
+		SccLocalPath7 = Framework\\Framework.Utility
+		SccProjectUniqueName8 = Framework\\Framework.Logging.SqlLogger\\Framework.Logging.SqlLogger.csproj
+		SccProjectTopLevelParentUniqueName8 = Framework.sln
+		SccProjectName8 = Framework/Framework.Logging.SqlLogger
+		SccLocalPath8 = Framework\\Framework.Logging.SqlLogger
+		SccProjectUniqueName9 = Application\\Application.Business.Models\\Application.Business.Models.csproj
+		SccProjectTopLevelParentUniqueName9 = Framework.sln
+		SccProjectName9 = Application/Application.Business.Models
+		SccLocalPath9 = Application\\Application.Business.Models
+		SccProjectUniqueName10 = Application\\Application.Data\\Application.Data.csproj
+		SccProjectTopLevelParentUniqueName10 = Framework.sln
+		SccProjectName10 = Application/Application.Data
+		SccLocalPath10 = Application\\Application.Data
+		SccProjectUniqueName11 = Application\\SolutionItems\\SolutionItems.csproj
+		SccProjectTopLevelParentUniqueName11 = Framework.sln
+		SccProjectName11 = Application/SolutionItems
+		SccLocalPath11 = Application\\SolutionItems
+		SccProjectUniqueName12 = Framework\\Framework.MakerChecker\\Framework.MakerChecker.csproj
+		SccProjectTopLevelParentUniqueName12 = Framework.sln
+		SccProjectName12 = Framework/Framework.MakerChecker
+		SccLocalPath12 = Framework\\Framework.MakerChecker
+		SccProjectUniqueName13 = Framework\\Framework.Configuration\\Framework.Configuration.csproj
+		SccProjectTopLevelParentUniqueName13 = Framework.sln
+		SccProjectName13 = Framework/Framework.Configuration
+		SccLocalPath13 = Framework\\Framework.Configuration
+		SccProjectUniqueName14 = Framework\\Framework.WebUI\\Framework.WebUI.csproj
+		SccProjectTopLevelParentUniqueName14 = Framework.sln
+		SccProjectName14 = Framework/Framework.WebUI
+		SccLocalPath14 = Framework\\Framework.WebUI
+		SccProjectUniqueName15 = Framework\\Framework.Authorization\\Framework.Authorization.csproj
+		SccProjectTopLevelParentUniqueName15 = Framework.sln
+		SccProjectName15 = Framework/Framework.Authorization
+		SccLocalPath15 = Framework\\Framework.Authorization
+		SccProjectUniqueName16 = Framework\\Framework.Caching\\Framework.Caching.csproj
+		SccProjectTopLevelParentUniqueName16 = Framework.sln
+		SccProjectName16 = Framework/Framework.Caching
+		SccLocalPath16 = Framework\\Framework.Caching
+		SccProjectUniqueName17 = Framework\\Framework.Configuration2\\Framework.Configuration2.csproj
+		SccProjectTopLevelParentUniqueName17 = Framework.sln
+		SccProjectName17 = Framework/Framework.Configuration2
+		SccLocalPath17 = Framework\\Framework.Configuration2
+	EndGlobalSection
+EndGlobal

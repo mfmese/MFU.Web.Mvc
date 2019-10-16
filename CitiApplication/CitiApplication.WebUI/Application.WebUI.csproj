@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <RootNamespace>CitiApplication.WebUI</RootNamespace>
+    <AssemblyName>MFU.WebUI</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ApplicationHelpers\**" />
+    <Content Remove="ApplicationHelpers\**" />
+    <EmbeddedResource Remove="ApplicationHelpers\**" />
+    <None Remove="ApplicationHelpers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Framework.sln" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="DevExtreme.AspNet.Core">
+      <HintPath>..\..\..\Dependencies\DevExtreme\18.2.7\DevExtreme.AspNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExtreme.AspNet.Data">
+      <HintPath>..\..\..\Dependencies\DevExtreme\18.2.7\DevExtreme.AspNet.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Views\AutomaticTradeFraction\Index.Scripts.cshtml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Views\Shared\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\CitiApplication.Business\Application.Business.csproj" />
+  </ItemGroup>
+
+</Project>

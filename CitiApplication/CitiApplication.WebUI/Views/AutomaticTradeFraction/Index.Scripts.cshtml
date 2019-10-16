@@ -1,0 +1,53 @@
+﻿<script  id="AutomaticTradeFraction.Index.Scripts" type="text/javascript">
+
+    function GenerateSwift(excelFileId) {
+
+        var dataGrid = $("#dataGridAutomaticTradeFraction").dxDataGrid("instance");
+        var data = dataGrid.getSelectedRowsData()[0];
+        var excelFileId = data.ExcelFileId;
+
+        $.post("/AutomaticTradeFraction/Export", { excelFileId: excelFileId })
+			.done(function (response, status, jqxhr) {
+
+                if (response.IsSuccess && response.Data != undefined) {
+					window.location = "/AutomaticTradeFraction/GetExportedFile";
+				}
+			})
+    }
+
+    function fileonValueChanged(e) {
+        $($(".dx-popup-bottom .dx-button")[0]).click(function () {
+
+            var file = e.value;
+            var excelFileId = $("#ExcelFileId").dxNumberBox("instance").option('value');
+
+            var formData = new FormData();
+            formData.append("file", file[0], file.name);
+            formData.append("excelFileId", excelFileId);
+
+            g_isAjaxFullPageLoading = true;
+
+            $.ajax(
+                {
+                    url: "/AutomaticTradeFraction/CreateOrUpdate",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    type: "POST",
+                    success: function (data) {}
+                });
+        });
+    }
+
+    function onInitNewRow(e) {
+
+        var stateMaker = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.StateMaker, Newtonsoft.Json.Formatting.Indented)); 
+        e.data.RefId = "new";
+        e.data.ExcelFileId = 0;
+        e.data.FileStateIdName = "UnProcessed";
+        e.data.StateIdName = "Input";
+        e.data.StateMaker = stateMaker; 
+        e.data.StateDate = Date().toString();
+    }
+
+</script>

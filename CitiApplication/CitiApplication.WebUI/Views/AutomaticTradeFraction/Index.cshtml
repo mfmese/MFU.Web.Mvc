@@ -1,0 +1,116 @@
+﻿@model AutomaticTradeFractionViewModel
+
+<h4>Automatic Trade For Fraction</h4>
+
+<div id="form-container">
+    @(Html.DevExtreme().Form<AutomaticTradeFractionViewModel>()
+        .ID("formFilterIndex")
+        .ColCount(9)
+        .Items(items =>
+        {
+            items.AddSimpleFor(m => m.StateFilter).Label(x => x.Text("State"))
+            .Editor(e => e.SelectBox().ToCitiSelectBoxEnum<StateFilter>(StateFilter.ActiveRecords).ID("sbStateFilter").Width(150));
+
+            items.AddSimpleFor(m => m.StateDate).Editor(e => e.DateBox().Value(DateTime.Now).Width("100%").ID("tbStateDate").Width(150));
+        })
+    )
+</div>
+
+@(Html.DevExtreme().DataGrid<Application.Business.Models.ExcelFile>()
+    .ToCitiDataGrid<Application.Business.Models.ExcelFile>()
+    .ID("dataGridAutomaticTradeFraction")
+    .CitiDataSource(Model.GridModel, loadParams: new {StateFilter = JSHelper.ValueFromDxSelectBox("#sbStateFilter"),StateDate = JSHelper.ValueFromDxDateBox("#tbStateDate"),})
+    .CitiColumnsWithMakerChecker(columns =>
+    {
+        columns.AddFor(x => x.ExcelFileId);
+        columns.AddFor(x => x.RefId).Width(75);
+        columns.AddFor(x => x.FileName).Caption("File Name");
+        columns.AddFor(x => x.Body).Caption("File").Visible(false);
+        columns.AddFor(x => x.FileStateIdName).Caption("File State");
+    })
+    .CitiCustomToolbarItems(btn =>
+    {
+        btn.AddButton().Icon("upload").Hint("Generate Swift MT542 DF / MT543 DVP File").OnClick("GenerateSwift").ShowMode(Framework.WebUI.Enums.CitiToolbarItemShowMode.Both).Text("Generate Swift MT542 DF / MT543 DVP File").ID("btnCtExportFile");
+    })
+    .Editing(o => o.AllowUpdating(true)
+        .AllowAdding(true)
+        .AllowDeleting(true)
+        .Mode(GridEditMode.Popup)
+        .Popup(p => p.Title(Model.GridModel.PopupTitle)
+            .ShowTitle(true)
+            .Width(750).Height(400)
+            .Position(pos => pos
+            .My(HorizontalAlignment.Center, VerticalAlignment.Center)
+            .At(HorizontalAlignment.Center, VerticalAlignment.Center)
+            .Of(new JS("window"))))
+        .Form(f => f.ColCount(2).ID("dataGridAutomaticTradeFractionForm").ElementAttr(new { enctype = "multipart/form-data" }).Items(items =>
+        {
+        items.AddSimpleFor(c => c.RefId).Editor(editor => editor.TextBox().Disabled(true));
+        items.AddSimpleFor(c => c.ExcelFileId).Editor(editor => editor.TextBox().ID("ExcelFileId")).CssClass("invisible");
+        items.AddSimpleFor(c => c.FileStateIdName).Editor(editor => editor.TextBox().Disabled(true));
+        items.AddSimpleFor(c => c.StateIdName).Editor(editor => editor.TextBox().Disabled(true));
+        items.AddSimpleFor(c => c.StateMaker).Editor(editor => editor.TextBox().Disabled(true));
+        items.AddSimpleFor(c => c.StateDate).Editor(editor => editor.TextBox().Disabled(true));
+        items.AddSimpleFor(c => c.Body).ColSpan(2).Template(@<text>  
+            @(Html.DevExtreme().FileUploader()
+                .ID("file")
+                .Name("Body")
+                .Multiple(false)
+                .Accept("*")
+                .SelectButtonText("Select file")
+                .OnValueChanged("fileonValueChanged")
+                .AllowedFileExtensions(new List<string> { ".xlsx" })
+                .UploadMode(FileUploadMode.Instantly)
+                .ElementAttr("class", "display-mode-disabled")
+                )
+            </text>);
+        })
+    ))
+    .OnInitNewRow("onInitNewRow")
+    .MasterDetail(md =>
+    {
+        md.Enabled(true);
+        md.Template(
+        @<text>
+            <div class="master-detail-caption"><%= data.FileName %> Swift Info:</div>
+            @(Html.DevExtreme().DataGrid<Application.Business.Models.MfuswiftInfo>()
+                .ShowBorders(true)
+                .DataSource(d => d.Mvc().Controller("AutomaticTradeFraction").LoadAction("LoadDetail").LoadParams(new { excelFileId = new JS("data.ExcelFileId") }))
+                .Columns(columns =>
+                {
+                    columns.AddFor(m => m.Acc);
+                    columns.AddFor(m => m.TradeDate);
+                    columns.AddFor(m => m.SettDate);
+                    columns.AddFor(m => m.Isin);
+                    columns.AddFor(m => m.Diff);
+                    columns.AddFor(m => m.Amount);
+                    columns.AddFor(m => m.Price);
+                    columns.AddFor(m => m.Refe);
+                    columns.AddFor(m => m.Act);
+                    columns.AddFor(m => m.TradeType);
+                })
+                .Summary(s => s.TotalItems(items =>
+                {
+                    items.AddFor(m => m.TradeType).SummaryType(SummaryType.Count).DisplayFormat("{0} records");
+                }))
+            )
+        </text>);
+    })
+)
+
+@Html.DevExtreme().Popup().HistoryOf("dataGridAutomaticTradeFraction").Width(1200).Height(700).Title("Customer Account History").ContentTemplate(
+@<text>
+    @(Html.DevExtreme().DataGrid<ExcelFileHistory>().ToCitiDataGrid<ExcelFileHistory>().HistoryOf("dataGridAutomaticTradeFraction")
+        .CitiColumnsWithMakerChecker(columns =>
+        {
+            columns.AddFor(x => x.ExcelFileHistoryId).Width(170);
+            columns.AddFor(x => x.ExcelFileId).Width(170);
+            columns.AddFor(x => x.FileName).Width(170);
+            columns.AddFor(x => x.Body).Width(170);
+        })
+    )
+</text>)
+
+@section Scripts {
+    <partial name="~/Views/AutomaticTradeFraction/Index.Scripts.cshtml" />
+}

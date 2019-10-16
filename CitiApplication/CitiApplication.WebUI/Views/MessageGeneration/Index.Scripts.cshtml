@@ -1,0 +1,15 @@
+﻿
+<script>
+
+    function ExportMfuFile() {
+
+        var dataGrid = $("#dataGridMessageGeneration").dxDataGrid("instance");
+        var data = dataGrid.getSelectedRowsData()[0];
+        var fileId = data.FileId;
+
+        $.post("/MessageGeneration/ExportMfuFile", { fileId: fileId })
+            .done(function (response, status, jqxhr) {
+        })
+    }   
+
+</script>

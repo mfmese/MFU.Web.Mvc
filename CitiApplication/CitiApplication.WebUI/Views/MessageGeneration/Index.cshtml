@@ -1,0 +1,48 @@
+﻿@model MessageGenerationViewModel
+
+<h4>Message Generation</h4>
+
+@(Html.DevExtreme().FileUploader().ToCitiFileUploader().ID("customFileUploader")
+    .CitiCustomUploadAction(Url.Action("ImportMfuFile", "MessageGeneration"))
+    .AllowedFileExtensions(new[] { "*" })
+)
+
+<div id="form-container">
+    <div class="row">
+        <div class="col-9">
+            @(Html.DevExtreme().Form<Application.WebUI.Models.MessageGenerationViewModel>()
+                .ID("formFilterIndex")
+                .ColCount(6)
+                .Items(items =>
+                {
+                    items.AddSimpleFor(m => m.BeginDate).Editor(e => e.DateBox().Value(DateTime.Now.AddDays(-1)).Width(150).ID("tbBeginDate"));
+
+                    items.AddSimpleFor(m => m.EndDate).Editor(e => e.DateBox().Value(DateTime.Now).Width(150).ID("tbEndDate"));
+                })
+            )
+        </div>
+    </div>
+</div>
+
+@(Html.DevExtreme().DataGrid<Mfufile>()
+    .ToCitiDataGrid<Mfufile>()
+    .ID("dataGridMessageGeneration")
+    .CitiDataSource(Model.GridModel, loadParams: new { beginDate = JSHelper.ValueFromDxDateBox("#tbBeginDate"), endDate = JSHelper.ValueFromDxDateBox("#tbEndDate") })
+    .CitiCustomToolbarItems(btn =>
+    {
+        btn.AddButton().Icon("upload").Hint("Export").OnClick("ExportMfuFile").ShowMode(Framework.WebUI.Enums.CitiToolbarItemShowMode.Both).Text("Export").ID("btnCtExportFile");
+        btn.AddButton().Icon("arrowdown").Hint("Import Mfu File").ShowMode(Framework.WebUI.Enums.CitiToolbarItemShowMode.Both).Text("Import")
+                                                                        .ShowMode(Framework.WebUI.Enums.CitiToolbarItemShowMode.Both)
+                                                                        .AsImport("customFileUploader");
+    })
+    .Columns(columns =>
+    {
+        columns.AddFor(x => x.FileId);
+        columns.AddFor(x => x.FileName);
+        columns.AddFor(x => x.EnterDate).DataType(GridColumnDataType.Date).Format("shortDateShortTime");
+    })
+)
+
+@section Scripts {
+    <partial name="~/Views/MessageGeneration/Index.Scripts.cshtml" />
+}
