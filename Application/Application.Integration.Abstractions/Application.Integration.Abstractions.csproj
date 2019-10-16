@@ -9,12 +9,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>CitiApplication.Integration</RootNamespace>
+    <RootNamespace>Application.Integration</RootNamespace>
     <AssemblyName>MFU.Integration.Abstractions</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CitiApplication.Business.Models\Application.Business.Models.csproj" />
+    <ProjectReference Include="..\Application.Business.Models\Application.Business.Models.csproj" />
   </ItemGroup>
 
 </Project>

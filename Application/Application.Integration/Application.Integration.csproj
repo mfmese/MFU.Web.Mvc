@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CitiApplication.Integration.Abstractions\Application.Integration.Abstractions.csproj" />
+    <ProjectReference Include="..\Application.Integration.Abstractions\Application.Integration.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>CitiApplication.Business</RootNamespace>
+    <RootNamespace>Application.Business</RootNamespace>
     <AssemblyName>MFU.Business.Models</AssemblyName>
   </PropertyGroup>
 

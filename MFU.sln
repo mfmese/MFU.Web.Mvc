@@ -5,20 +5,20 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{F31E10BC-51FD-4198-9E5C-954218A04A2B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Business", "CitiApplication\CitiApplication.Business\Application.Business.csproj", "{6A65532F-1CBE-468F-8022-54588EC3D928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Business", "Application\Application.Business\Application.Business.csproj", "{6A65532F-1CBE-468F-8022-54588EC3D928}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.WebUI", "CitiApplication\CitiApplication.WebUI\Application.WebUI.csproj", "{409B1D55-20AF-415C-BB74-FD62B84EA726}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.WebUI", "Application\Application.WebUI\Application.WebUI.csproj", "{409B1D55-20AF-415C-BB74-FD62B84EA726}"
 	ProjectSection(ProjectDependencies) = postProject
 		{6A65532F-1CBE-468F-8022-54588EC3D928} = {6A65532F-1CBE-468F-8022-54588EC3D928}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Integration", "CitiApplication\CitiApplication.Integration\Application.Integration.csproj", "{26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Integration", "Application\Application.Integration\Application.Integration.csproj", "{26FCD51E-A4F7-496E-BFBD-DDCECFA9C1E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Business.Models", "CitiApplication\CitiApplication.Business.Models\Application.Business.Models.csproj", "{E26C5F25-0D73-40D8-A69B-016DFD08E12E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Business.Models", "Application\Application.Business.Models\Application.Business.Models.csproj", "{E26C5F25-0D73-40D8-A69B-016DFD08E12E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Data", "CitiApplication\CitiApplication.Data\Application.Data.csproj", "{0B233802-78BE-4CE6-80E0-27F928E770F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Data", "Application\Application.Data\Application.Data.csproj", "{0B233802-78BE-4CE6-80E0-27F928E770F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Integration.Abstractions", "CitiApplication\CitiApplication.Integration.Abstractions\Application.Integration.Abstractions.csproj", "{3314FE6C-0F47-4036-8922-DF4730BD0A3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.Integration.Abstractions", "Application\Application.Integration.Abstractions\Application.Integration.Abstractions.csproj", "{3314FE6C-0F47-4036-8922-DF4730BD0A3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

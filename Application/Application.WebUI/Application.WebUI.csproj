@@ -10,7 +10,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>CitiApplication.WebUI</RootNamespace>
+    <RootNamespace>Application.WebUI</RootNamespace>
     <AssemblyName>MFU.WebUI</AssemblyName>
   </PropertyGroup>
 
@@ -67,7 +67,7 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\CitiApplication.Business\Application.Business.csproj" />
+    <ProjectReference Include="..\Application.Business\Application.Business.csproj" />
   </ItemGroup>
 
 </Project>

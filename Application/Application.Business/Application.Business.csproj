@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>CitiApplication.Business</RootNamespace>
+    <RootNamespace>Application.Business</RootNamespace>
     <AssemblyName>MFU.Business</AssemblyName>
   </PropertyGroup>
 
@@ -29,9 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CitiApplication.Business.Models\Application.Business.Models.csproj" />
-    <ProjectReference Include="..\CitiApplication.Data\Application.Data.csproj" />
-    <ProjectReference Include="..\CitiApplication.Integration\Application.Integration.csproj" />
+    <ProjectReference Include="..\Application.Business.Models\Application.Business.Models.csproj" />
+    <ProjectReference Include="..\Application.Data\Application.Data.csproj" />
+    <ProjectReference Include="..\Application.Integration\Application.Integration.csproj" />
   </ItemGroup>
 
   <ItemGroup>
